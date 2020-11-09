@@ -1,4 +1,4 @@
-package com.github.dallasgutauckis.kotlinsyntheticsmigratorplugin
+package com.github.dallasgutauckis.kotlinsyntheticsmigrator
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

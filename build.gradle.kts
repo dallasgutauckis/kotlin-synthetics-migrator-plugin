@@ -54,6 +54,8 @@ intellij {
     downloadSources = platformDownloadSources.toBoolean()
     updateSinceUntilBuild = true
 
+    alternativeIdePath = "/home/dallas/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/202.6922807/"
+
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     setPlugins(*platformPlugins.split(',').map(String::trim).filter(String::isNotEmpty).toTypedArray())
 }
@@ -117,6 +119,11 @@ tasks {
 
     runPluginVerifier {
         ideVersions(pluginVerifierIdeVersions)
+    }
+
+    runIde {
+        autoReloadPlugins = true
+        jvmArgs = mutableListOf("-Xmx8g")
     }
 
     publishPlugin {

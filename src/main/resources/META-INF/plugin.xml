@@ -1,19 +1,32 @@
 <idea-plugin>
-    <id>com.github.dallasgutauckis.kotlinsyntheticsmigratorplugin</id>
-    <name>kotlin-synthetics-migrator-plugin</name>
+    <id>com.github.dallasgutauckis.kotlinsyntheticsmigrator</id>
+    <name>kotlin-synthetics-migrator</name>
     <vendor>dallasgutauckis</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>org.jetbrains.plugins.gradle.java</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.android</depends>
+
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.dallasgutauckis.kotlinsyntheticsmigratorplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.dallasgutauckis.kotlinsyntheticsmigratorplugin.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.dallasgutauckis.kotlinsyntheticsmigrator.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.github.dallasgutauckis.kotlinsyntheticsmigrator.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.dallasgutauckis.kotlinsyntheticsmigratorplugin.listeners.MyProjectManagerListener"
+        <listener class="com.github.dallasgutauckis.kotlinsyntheticsmigrator.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.dallasgutauckis.kotlinsyntheticsmigrator.actions.SetContentViewConvertToViewBindingAction"
+                class="com.github.dallasgutauckis.kotlinsyntheticsmigrator.actions.SetContentViewConvertToViewBindingAction"
+                text="Convert to ViewBinding">
+            <add-to-group group-id="RefactoringMenu4" anchor="first"/>
+            <add-to-group group-id="QuickActions" />
+        </action>
+    </actions>
 </idea-plugin>
