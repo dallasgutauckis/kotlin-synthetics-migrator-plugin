@@ -41,7 +41,7 @@ import javax.swing.JComponent
 
 class SetContentViewConvertToViewBindingAction : AnAction() {
 
-    // TODO Create binding intializers based on the implementaiton (Activity, Fragment, View, maybe a raw LayoutInflater)
+    // TODO Create binding intializers based on the implementation (Activity, Fragment, View, maybe a raw LayoutInflater)
     private fun createBindingInitializer(ktPsiFactory: KtPsiFactory, bindingClassName: String, parentClass: KtClass): KtExpression {
         return ktPsiFactory.createExpression("binding = $bindingClassName.inflate(layoutInflater)")
     }

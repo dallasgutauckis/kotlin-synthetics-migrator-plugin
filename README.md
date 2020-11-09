@@ -4,6 +4,10 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
+<!-- Plugin description -->
+A plugin to convert Kotlin synthetics and standard `findViewById` implementations to use [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
+<!-- Plugin description end -->
+
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
 - [x] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
@@ -12,10 +16,6 @@
 - [ ] Set the Plugin ID in the above README badges.
 - [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
-<!-- Plugin description -->
-A plugin to convert Kotlin synthetics and standard `findViewById` implementations to use [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
-<!-- Plugin description end -->
 
 ## Installation
 
